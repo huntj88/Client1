@@ -11,7 +11,6 @@ public class GUI extends JPanel implements ActionListener{
     protected JTextField textField;
     protected JTextArea textArea;
     private final static String newline = "\n";
-    String username = "huntj88";
     PacketList outPackets,inPackets;
 
     public GUI(PacketList outPackets,PacketList inPackets)
@@ -43,9 +42,9 @@ public class GUI extends JPanel implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String text = username+": "+textField.getText();
+        String text = Start.username+": "+textField.getText();
         //addText(text);
-        outPackets.add(new TextPacket(username,text));
+        outPackets.add(new TextPacket(Start.username,text));
         textField.selectAll();
     }
 

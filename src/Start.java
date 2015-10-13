@@ -9,6 +9,7 @@ public class Start {
 
     public static final int WIDTH = 500;
     public static final int HEIGHT = 300;
+    public static final String username = "huntj88";
     GUI gui;
 
     public static void main(String[] cows)
@@ -34,13 +35,13 @@ public class Start {
         IncomingPackets incomingPackets = new IncomingPackets(inPackets,clientSocket,IPAddress);
         gui = new GUI(outPackets,inPackets);
         PacketLogic packetLogic = new PacketLogic(gui,inPackets);
-        setUpGui(gui);
+        setUpGui(gui,outPackets);
     }
 
-    public void setUpGui(GUI gui)
+    public void setUpGui(GUI gui,PacketList outPackets)
     {
-        JFrame frame = new JFrame("Server");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        CustomFrame frame = new CustomFrame("Server",outPackets);
+        //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //GUI gui = new GUI(packets);
         frame.getContentPane().add(gui);
