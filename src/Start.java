@@ -7,10 +7,10 @@ import java.net.InetAddress;
  */
 public class Start {
 
-    public static final int WIDTH = 500;
-    public static final int HEIGHT = 300;
+    public static final int WIDTH = 900;
+    public static final int HEIGHT = 500;
     public static final String username = "huntj88";
-    GUI gui;
+    GameScreen gui;
 
     public static void main(String[] cows)
     {
@@ -33,12 +33,12 @@ public class Start {
         PacketList inPackets = new PacketList();
         OutgoingPackets outgoingPackets = new OutgoingPackets(outPackets,clientSocket,IPAddress);
         IncomingPackets incomingPackets = new IncomingPackets(inPackets,clientSocket,IPAddress);
-        gui = new GUI(outPackets,inPackets);
+        gui = new GameScreen(outPackets,inPackets);
         PacketLogic packetLogic = new PacketLogic(gui,inPackets);
         setUpGui(gui,outPackets);
     }
 
-    public void setUpGui(GUI gui,PacketList outPackets)
+    public void setUpGui(GameScreen gui,PacketList outPackets)
     {
         CustomFrame frame = new CustomFrame("Server",outPackets);
         //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -18,6 +18,10 @@ public class CustomFrame extends JFrame {
         super.processWindowEvent(e);
         if(e.getID() == WindowEvent.WINDOW_CLOSING) {
             outPackets.add(new LogoutPacket(Start.username));
+            while(outPackets.size()>0)
+            {
+
+            }
             System.exit(0);
         }
     }

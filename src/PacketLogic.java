@@ -3,10 +3,10 @@
  */
 public class PacketLogic implements Runnable {
 
-    GUI gui;
+    GameScreen gui;
     PacketList inPackets;
 
-    public PacketLogic(GUI gui,PacketList inPackets)
+    public PacketLogic(GameScreen gui,PacketList inPackets)
     {
         this.gui=gui;
         this.inPackets=inPackets;
@@ -19,7 +19,7 @@ public class PacketLogic implements Runnable {
         {
             if(inPackets.size()>0)
             {
-                inPackets.get().doPacket(gui);
+                inPackets.get().doPacket();
                 inPackets.remove();
             }
             else

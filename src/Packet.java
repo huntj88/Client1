@@ -27,7 +27,7 @@ public class Packet implements Serializable,PacketInterface{
     }
 
     @Override
-    public void doPacket(GUI gui) {
+    public void doPacket() {
         System.out.println("regular packet");
     }
 }

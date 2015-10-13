@@ -11,10 +11,11 @@ public class LogoutPacket extends Packet {
     }
 
     @Override
-    public void doPacket(GUI gui)
+    public void doPacket()
     {
         //logout go here
-        gui.addText(username+" has logged out");
+        //gui.addText(username + " has logged out");
+        ChatBox.addText(username+" has logged out");
         //remove the player name from list of people so you dont see them anymore?
     }
 }

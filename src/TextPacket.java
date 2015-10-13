@@ -18,8 +18,9 @@ public class TextPacket extends Packet {
     }
 
     @Override
-    public void doPacket(GUI gui)
+    public void doPacket()
     {
-        gui.addText(getText());
+        //gui.addText(getText());
+        ChatBox.addText(text);
     }
 }
