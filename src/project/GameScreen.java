@@ -48,7 +48,7 @@ public class GameScreen extends JPanel implements Runnable,KeyListener{
         if(keyboardType)
         {
             chatBox.draw(g,10,getHeight()-340,300);
-            g.setColor(Color.white);
+            g.setColor(Color.BLACK);
             g.drawRect(0, getHeight() - 30, getWidth() - 1, 29);
             g.drawString(typedString,10,getHeight()-10);
         }

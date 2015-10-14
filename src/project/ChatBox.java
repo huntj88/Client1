@@ -25,7 +25,7 @@ public class ChatBox  {
     public synchronized void draw(Graphics g,int x, int y, int height)
     {
         int yDisplace = 0;
-        g.setColor(Color.white);
+        g.setColor(Color.BLACK);
         Iterator<String> itr = chat.descendingIterator();
         while(itr.hasNext()){
             if(yDisplace>height)
