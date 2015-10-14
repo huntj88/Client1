@@ -1,4 +1,7 @@
-import javax.swing.*;
+package project;
+
+import project.packet.LoginPacket;
+
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 
@@ -9,7 +12,7 @@ public class Start {
 
     public static final int WIDTH = 900;
     public static final int HEIGHT = 500;
-    public static final String username = "huntj88";
+    public static final String username = "huntj89";
     GameScreen gui;
 
     public static void main(String[] cows)
@@ -32,6 +35,7 @@ public class Start {
         PacketList outPackets = new PacketList();
         PacketList inPackets = new PacketList();
         OutgoingPackets outgoingPackets = new OutgoingPackets(outPackets,clientSocket,IPAddress);
+        outPackets.add(new LoginPacket(Start.username));
         IncomingPackets incomingPackets = new IncomingPackets(inPackets,clientSocket,IPAddress);
         gui = new GameScreen(outPackets,inPackets);
         PacketLogic packetLogic = new PacketLogic(gui,inPackets);

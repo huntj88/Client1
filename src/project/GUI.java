@@ -1,3 +1,7 @@
+package project;
+
+import project.packet.TextPacket;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -44,7 +48,7 @@ public class GUI extends JPanel implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         String text = Start.username+": "+textField.getText();
         //addText(text);
-        outPackets.add(new TextPacket(Start.username,text));
+        outPackets.add(new TextPacket(Start.username, text));
         textField.selectAll();
     }
 

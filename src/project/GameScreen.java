@@ -1,3 +1,7 @@
+package project;
+
+import project.packet.TextPacket;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -15,6 +19,8 @@ public class GameScreen extends JPanel implements Runnable,KeyListener{
     private boolean keyboardType=false;
     private String typedString = "";
     private ChatBox chatBox=new ChatBox();
+    private MainPlayer mainPlayer = new MainPlayer(0,0,Start.username,Start.WIDTH/2,Start.HEIGHT/2);
+    private Map map = new Map(mainPlayer.getDisplaceX(),mainPlayer.getDisplaceY());
 
     public GameScreen(PacketList outPackets,PacketList inPackets)
     {
@@ -35,6 +41,9 @@ public class GameScreen extends JPanel implements Runnable,KeyListener{
     {
         super.paintComponent(g);
         g.fillRect(0, 0, getWidth(), getHeight());
+        map.draw(g);
+        mainPlayer.draw(g);
+        //new Player(200,200,"hdf").draw(g);
 
         if(keyboardType)
         {

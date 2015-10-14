@@ -1,3 +1,7 @@
+package project;
+
+import project.packet.Packet;
+
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;

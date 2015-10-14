@@ -1,6 +1,9 @@
-/**
+package project; /**
  * Created by James on 10/12/2015.
  */
+
+import project.packet.Packet;
+import project.packet.TextPacket;
 
 import java.io.*;
 import java.net.*;

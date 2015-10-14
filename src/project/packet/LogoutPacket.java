@@ -1,3 +1,7 @@
+package project.packet;
+
+import project.ChatBox;
+
 /**
  * Created by James on 10/13/2015.
  */
@@ -15,7 +19,7 @@ public class LogoutPacket extends Packet {
     {
         //logout go here
         //gui.addText(username + " has logged out");
-        ChatBox.addText(username+" has logged out");
+        ChatBox.addText(username + " has logged out");
         //remove the player name from list of people so you dont see them anymore?
     }
 }

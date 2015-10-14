@@ -1,3 +1,7 @@
+package project;
+
+import project.packet.LogoutPacket;
+
 import javax.swing.*;
 import java.awt.event.WindowEvent;
 

@@ -1,3 +1,7 @@
+package project;
+
+import project.packet.Packet;
+
 import java.util.LinkedList;
 
 /**

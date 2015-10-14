@@ -1,11 +1,13 @@
+package project;
+
+import project.packet.Packet;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
-import java.util.Iterator;
-import java.util.Map;
 
 /**
  * Created by James on 10/12/2015.

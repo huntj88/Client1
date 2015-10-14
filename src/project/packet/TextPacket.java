@@ -1,3 +1,7 @@
+package project.packet;
+
+import project.ChatBox;
+
 /**
  * Created by James on 10/13/2015.
  */
